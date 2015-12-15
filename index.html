@@ -1,0 +1,65 @@
+﻿
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <!-- Theme Made By www.w3schools.com - No Copyright -->
+    <title>My First AJS App</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Ganesh Raskar" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico">
+</head>
+<body ng-controller="indexCtrl" id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a  data-target="#myNavbar" class="navbar-brand" href="#/">{{title}}</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#user">Profile</a></li>
+                    <li ><a  class="" ng-show="userInfo.isAuthenticated" ng-click="logout()">Logout</a></li>
+                    <li ><a class="" ng-hide=" userInfo.isAuthenticated" ng-click="login()">Login</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+    <div class="text-center" ng-view>
+        
+    </div>
+    
+
+
+
+    <footer class=" text-center">
+        <!--<a href="" title="To Top">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a-->
+        <p>footer</p>
+    </footer>
+    <script src="assets/js/customScript.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.2.25/angular-route.js"></script>
+    <script src="assets/lib/adal-angular.js"></script>
+    <script src="assets/lib/adal.js"></script>
+    <script src="app.js"></script>
+    <script src="app/controllers/homeCtrl.js"></script>
+    <script src="app/controllers/userCtrl.js"></script>
+
+</body>
+</html>
